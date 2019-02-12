@@ -18,10 +18,11 @@ public class QaguruFirstTest {
         System.out.println(qTitle);
         Assertions.assertEquals("Test", qTitle);
 
-        WebElement qName = driver.findElement(By.xpath("//input[@id='firstName']"));
+        WebElement qName = driver.findElement(By.id("firstName"));
+        qName.click();
         qName.sendKeys("Ivans");
-        WebElement qSurn = driver.findElement(By.xpath("//input[@id='lastName']"));
+        WebElement qSurn = driver.findElement(By.id("lastName"));
+        qSurn.click();
         qSurn.sendKeys("Berzins");
-        System.out.println();
     }
 }
